@@ -1,7 +1,7 @@
 <#
     .DESCRIPTION
-    File used for logging. This is intended to be used with Intune applications, and by default
-    it will log to C:\Windows\Temp\AppLogs.
+    Used for Intune logging. This is intended to be used with Intune applications, and by default
+    it will log to C:\Windows\ProgramData\AppLogs.
     It is recommended to put this in a wrapper function to log different files.
 
     .PARAMETERS
@@ -36,7 +36,7 @@ param(
     [switch] $SkipDir
 )
 
-$outPath = "C:\Windows\Temp\AppLogs"
+$outPath = "C:\Windows\ProgramData\AppLogs"
 
 if(!(test-path $outPath) -and !($SkipDir)){
     mkdir $outPath | out-null
