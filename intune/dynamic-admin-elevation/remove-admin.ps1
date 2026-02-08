@@ -35,8 +35,8 @@ if("$user" -notmatch "azuread"){
     log "User $user is not AzureAD joined"
     exit 1
 }
-if($adminStr -notmatch "$userName"){
-    log "User $user is already not admin"
+if("$adminStr" -notmatch "$userName"){
+    log "Could not find $user in $adminStr"
     exit 0
 }
 
@@ -50,7 +50,7 @@ try{
 }
 $adminStr = (net localgroup administrator $user)
 
-if($adminStr -match "$userName"){
+if("$adminStr" -match "$userName"){
     log "Failed to remove user $user as admin"
     exit 1
 }else{
