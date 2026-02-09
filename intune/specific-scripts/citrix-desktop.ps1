@@ -4,9 +4,6 @@
 
     .AUTHOR
     Tri Nguyen
-
-    .UPDATED
-    2/7/2026
 #>
 
 $startMenuFolder = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs"

@@ -20,9 +20,6 @@
 
     .AUTHOR
     Tri Nguyen
-
-    .UPDATED
-    2/7/2026
 #>
 
 # TODO: log levels

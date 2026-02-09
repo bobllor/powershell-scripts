@@ -5,9 +5,6 @@
 
     .AUTHOR
     Tri Nguyen
-
-    .UPDATED
-    2/7/2026
 #>
 
 $user = (get-ciminstance -class win32_computersystem).username
